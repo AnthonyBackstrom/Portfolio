@@ -57,22 +57,27 @@ I'm currently looking for opportunities where I can turn data into decisions, an
 
 ---
 
-## 🧪 Sample Projects
+## 📂 Projects
 
-### 📊 **Manufacturing KPI Dashboard**  
-Analyzed factory log data using Python and Power BI to monitor production cycle times and uncover bottlenecks.
+### 🚗 [Car Price Predictor](https://github.com/yourusername/car-price-predictor)  
+As part of a data analytics and machine learning project at JAMK University of Applied Sciences, our four‑person team developed a machine learning model that analyzes data from over **3 million used cars**.  
+The resulting application provides accurate price estimates for future vehicles to support **car dealership needs**, enabling:
+- Data-driven pricing decisions  
+- Improved customer experience  
+- Optimized inventory management
 
-### 🤖 **Predictive Maintenance Model**  
-Created a machine learning model to predict potential machine faults based on vibration and operational data.
+### 🧪 [Rapid Test Strip Analyzer](https://github.com/yourusername/rapid-test-strip-analyzer)  
+This self-directed project resulted in a **Python-based prototype** that analyzes the visibility of control and test lines in a photo of a rapid test strip.  
+Using **OpenCV** and **NumPy**, the system:
+- Automatically detects lines  
+- Measures intensity  
+- Compares values to a configurable threshold  
 
-### 📱 **Smart Task Tracker (Android)**  
-Built an Android app in Kotlin with dynamic UI and local database features to manage daily routines.
+The tool simplifies visual interpretation, supports documentation, and lays the groundwork for a future mobile healthcare app.
 
-### 🌡️ **IoT Sensor Logger with Raspberry Pi**  
-Logged environmental sensor data in real-time and visualized results on a local dashboard.
+### 🤖 [AIDA Project](https://github.com/yourusername/aida-project) *(Coming soon)*  
+A larger data-focused development project currently in progress. More details will be added once the initial version is ready for release.
 
-### 🔁 **API Automation Pipeline**  
-Automated REST API calls and data ingestion using Python and Postman for internal analytics systems.
 
 ---
 
