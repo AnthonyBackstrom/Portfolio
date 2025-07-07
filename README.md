@@ -2,7 +2,7 @@
 
 I'm a final-year ICT engineering student at **Jyväskylä University of Applied Sciences**, specializing in **data analytics** and **artificial intelligence**. My studies are nearly complete — just the **thesis** and **final internship** remain.
 
-Before stepping into tech, I spent 8 years working in **precision manufacturing** as a CNC machinist, operating Fanuc and Siemens systems. That hands-on experience gave me a deep appreciation for efficiency, accuracy, and solving practical problems — things I now approach from a data and automation perspective.
+Before stepping into tech, I spent 8 years working in **precision manufacturing** as a CNC machinist, operating Fanuc, AutoCAD and Siemens systems. That hands-on experience gave me a deep appreciation for efficiency, accuracy, and solving practical problems — things I now approach from a data and automation perspective.
 
 I'm currently looking for opportunities where I can turn data into decisions, and code into real-world impact.
 
@@ -10,11 +10,11 @@ I'm currently looking for opportunities where I can turn data into decisions, an
 
 ## ⚡ Quick Facts
 
-- 🧠 Strong analytical mindset — I thrive on solving real-world problems with code and data
+- 🧠 I'm part data wrangler, part automation nerd, part board game strategist
 - 📊 I use **Excel** for everything: tracking maintenance, planning meals, budgeting, scheduling... seriously, everything
-- 🤖 I build things with **Raspberry Pi** — automation, sensors, logging, and small-scale IoT
+- 🤖 I build things with **Raspberry Pi** — automation, sensors, logging, and random Raspberry Pi contraptions "just because"
 - 🎲 I love **board games** and **miniature painting** — creativity and strategy keep me sharp
-- 🧩 I enjoy planning workflows, routines, and complex tasks just for fun
+- 🧩 I believe every problem is either a logic puzzle or a spreadsheet waiting to happen
 
 ---
 
@@ -34,13 +34,26 @@ I'm currently looking for opportunities where I can turn data into decisions, an
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat&logo=postman&logoColor=white)
 
 ### 🧠 Machine Learning & Data Science
-- `scikit-learn`, `TensorFlow`, `Keras`, `Pandas`, `NumPy`, `Matplotlib`, `Seaborn`, `Jupyter`
+![scikit-learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat&logo=scikitlearn&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-D00000?style=flat&logo=keras&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
 
 ### 🗃️ Databases
-- PostgreSQL, MySQL, SQLite, basic MongoDB
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
 
 ### ⚙️ Tools & Environments
-- GitLab CI/CD, Docker (basics), Bash, REST APIs, Raspberry Pi
+![GitLab CI/CD](https://img.shields.io/badge/GitLab_CI%2FCD-FC6D26?style=flat&logo=gitlab&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnubash&logoColor=white)
+![REST API](https://img.shields.io/badge/REST%20API-000000?style=flat&logo=api&logoColor=white)
+![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-C51A4A?style=flat&logo=raspberrypi&logoColor=white)
+
 
 ---
 
@@ -65,9 +78,27 @@ Automated REST API calls and data ingestion using Python and Postman for interna
 
 ## 🌱 I'm Currently Learning
 
-- `FastAPI` for modern Python backends  
-- `Docker` for containerized workflows  
-- More advanced `machine learning` techniques and MLOps practices  
+- 🧪 Improving my machine learning basics  
+  (understanding model selection, overfitting, evaluation metrics like precision & recall)
+
+- 📦 Building simple data pipelines  
+  (moving from Jupyter scripts to reusable Python workflows with better structure)
+
+- 📊 Designing clearer dashboards  
+  (learning best practices in Power BI to tell better data stories)
+
+- 🔗 Using APIs and automation  
+  (fetching data from REST APIs, automating data collection with Python and scheduling tools)
+
+- 🧰 Writing cleaner Python  
+  (using virtual environments, modular code, and practicing real-world project structure)
+
+- ☁️ Exploring cloud basics  
+  (getting familiar with platforms like Google Cloud or Azure for data storage and analytics)
+
+- 📁 Version control for data projects  
+  (practicing Git & GitLab for notebooks, scripts, and experiment tracking)  
+
 - How to make better coffee ☕
 
 ---
@@ -75,6 +106,7 @@ Automated REST API calls and data ingestion using Python and Postman for interna
 ## 💬 Languages
 
 - 🇫🇮 Finnish – Native  
+- 🇪🇸 Spanish – Fluent  
 - 🇬🇧 English – Fluent  
 - 🇸🇪 Swedish – Basic understanding
 
@@ -82,11 +114,9 @@ Automated REST API calls and data ingestion using Python and Postman for interna
 
 ## 📫 Let's Connect
 
-- 📧 Email: *you@example.com*  
-- 🔗 LinkedIn: [linkedin.com/in/yourname](https://linkedin.com/in/yourname)  
-- 💻 GitHub: [github.com/yourusername](https://github.com/yourusername)  
-- 📁 GitLab: [gitlab.com/yourusername](https://gitlab.com/yourusername)
+- 📧 Email: *anthony.backstrom.work@gmail.com*  
+- 🔗 LinkedIn: [linkedin.com/in/yourname](www.linkedin.com/in/anthony-bäckström-b66a442b0)  
+
 
 ---
 
-> *“Great data doesn’t speak for itself — I help give it a voice.”*
