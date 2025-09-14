@@ -19,7 +19,7 @@ I'm currently looking for opportunities where I can turn data into decisions, an
 
 # 📂 Projects
 
-## 🧪 [FAST-TEST – Smartphone LFA Strip Reader 2025(ongoing)]() *(Prototype)*
+## 🧪 [FAST-TEST – Smartphone LFA Strip Reader (ONGOING)]() *(Prototype)*
 
 **FAST-TEST** is a Python-based desktop prototype that transforms a smartphone into a compact reader for hormone-sensitive **lateral flow test strips (LFA)** — starting with salivary cortisol and testosterone. The application detects 0–4 visible lines in the test area from a photo and maps them to estimated hormone levels. Results are visualized on a time-series curve and saved for trend tracking.
 
@@ -41,7 +41,7 @@ This solution is designed as a **research-grade prototype** and is **not for med
 
 
 
-## 🚗 [AIDA - Car Price Predictor 2024](./aida-team1/6-deployment/report/end_report.ipynb)  
+## 🚗 [AIDA - Car Price Predictor 2024](./AIDA/6-deployment/report/end_report.ipynb)  
 As part of a data analytics and machine learning project at JAMK University of Applied Sciences, our four‑person team developed a machine learning model that analyzes data from over **3 million used cars**.  
 The resulting application provides accurate price estimates for future vehicles to support **car dealership needs**, enabling:
 - Data-driven pricing decisions  
@@ -49,16 +49,16 @@ The resulting application provides accurate price estimates for future vehicles 
 - Optimized inventory management  
 
 **My role in the project** focused on:
-- Cleaning and preprocessing large-scale automotive datasets  [Data description report](./aida-team1/2-data-understanding/data-description-report.ipynb) 
-- Exploring and analyzing the raw automotive data to uncover trends and relevant features [Data Preparation Report](./aida-team1/3-data-preparation/data-preparation-report.ipynb) , ["What kind of cars sell the worst?"](./aida-team1/3-data-preparation/worst_cars.ipynb) 
-- Training and tuning the machine learning model  [Creation, training, and analyzation of Light Gradient Boosted Machine -model](./aida-team1/4-modeling/lightgbm_model.ipynb) 
+- Cleaning and preprocessing large-scale automotive datasets  [Data description report](./AIDA/2-data-understanding/data-description-report.ipynb) 
+- Exploring and analyzing the raw automotive data to uncover trends and relevant features [Data Preparation Report](./AIDA/3-data-preparation/data-preparation-report.ipynb) , ["What kind of cars sell the worst?"](./AIDA/3-data-preparation/worst_cars.ipynb) 
+- Training and tuning the machine learning model  [Creation, training, and analyzation of Light Gradient Boosted Machine -model](./AIDA/4-modeling/lightgbm_model.ipynb) 
 - Integrating the trained model into our application  
 - Testing the application functionality and validating model outputs
 
 
 
 
-## 📥 [Skillpicker – Future Skills Mapping Tool 2023](./x-backend/README.md)
+## 📥 [Skillpicker – Future Skills Mapping Tool 2023](./skillpicker/README.md)
 
 As part of the **Future Factory course** at JAMK University of Applied Sciences, our team *Code Crusaders* was assigned to design and develop an application called **Skillpicker**.  
 The goal of the project is to bridge the gap between education and industry by collecting information on future skill needs from businesses and providing it to educational institutions. This helps schools update curricula to match real-world demands — improving employability and reducing the skill mismatch.
