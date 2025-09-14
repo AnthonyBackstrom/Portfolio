@@ -6,7 +6,7 @@ Before stepping into tech, I spent 8 years working in **precision manufacturing*
 
 I'm currently looking for opportunities where I can turn data into decisions, and code into real-world impact.
 
----
+
 
 ## ⚡ Quick Facts
 
@@ -15,6 +15,69 @@ I'm currently looking for opportunities where I can turn data into decisions, an
 - 🤖 I build things with **Raspberry Pi** — automation, sensors, logging, and random Raspberry Pi contraptions "just because"
 - 🎲 I love **board games** and **miniature painting** — creativity and strategy keep me sharp
 - 🧩 I believe every problem is either a logic puzzle or a spreadsheet waiting to happen
+
+
+# 📂 Projects
+
+## 🧪 [FAST-TEST – Smartphone LFA Strip Reader 2025(ongoing)]() *(Prototype)*
+
+**FAST-TEST** is a Python-based desktop prototype that transforms a smartphone into a compact reader for hormone-sensitive **lateral flow test strips (LFA)** — starting with salivary cortisol and testosterone. The application detects 0–4 visible lines in the test area from a photo and maps them to estimated hormone levels. Results are visualized on a time-series curve and saved for trend tracking.
+
+This project is developed **in collaboration with a friend** during our free time, with expert data support and validation from **two medical companies** involved in hormone diagnostics. They are responsible for providing test materials and reference data.
+
+This solution is designed as a **research-grade prototype** and is **not for medical use**.
+
+**My responsibilities in the project:**
+- Independently developed the full prototype in Python & JupyterLab  
+- Designed and implemented the image processing pipeline using **OpenCV**  
+- Developed the calibration workflow and thresholding logic  
+- Built the reporting layer (graph output, text feedback, data logging)  
+- Maintained the repository and organized the entire codebase  
+- Designed the project structure and technical documentation  
+
+📌 Due to ongoing development, only planning documents are public for now. Source demo code and demo datasets will be shared after final review.
+
+> 🔒 *Prototype phase only – not validated for clinical use.*
+
+
+
+## 🚗 [AIDA - Car Price Predictor 2024](./aida-team1/6-deployment/report/end_report.ipynb)  
+As part of a data analytics and machine learning project at JAMK University of Applied Sciences, our four‑person team developed a machine learning model that analyzes data from over **3 million used cars**.  
+The resulting application provides accurate price estimates for future vehicles to support **car dealership needs**, enabling:
+- Data-driven pricing decisions  
+- Improved customer experience  
+- Optimized inventory management  
+
+**My role in the project** focused on:
+- Cleaning and preprocessing large-scale automotive datasets  [Data description report](./aida-team1/2-data-understanding/data-description-report.ipynb) 
+- Exploring and analyzing the raw automotive data to uncover trends and relevant features [Data Preparation Report](./aida-team1/3-data-preparation/data-preparation-report.ipynb) , ["What kind of cars sell the worst?"](./aida-team1/3-data-preparation/worst_cars.ipynb) 
+- Training and tuning the machine learning model  [Creation, training, and analyzation of Light Gradient Boosted Machine -model](./aida-team1/4-modeling/lightgbm_model.ipynb) 
+- Integrating the trained model into our application  
+- Testing the application functionality and validating model outputs
+
+
+
+
+## 📥 [Skillpicker – Future Skills Mapping Tool 2023](./x-backend/README.md)
+
+As part of the **Future Factory course** at JAMK University of Applied Sciences, our team *Code Crusaders* was assigned to design and develop an application called **Skillpicker**.  
+The goal of the project is to bridge the gap between education and industry by collecting information on future skill needs from businesses and providing it to educational institutions. This helps schools update curricula to match real-world demands — improving employability and reducing the skill mismatch.
+
+Our solution features:
+- A responsive web application where businesses can submit skill data (based on the SFIA framework)  
+- A database-driven backend for storing and managing the input  
+- A clean and user-friendly interface for easy interaction and data submission
+
+**My role in the project** focused on frontend development. I was responsible for:
+- Designing and building the **official website** and web interface for the Skill Collector service  
+- Creating the questionnaire form for businesses to input data  
+- Implementing responsive design and accessibility features  
+- Collaborating with the backend team to ensure smooth data flow and integration  
+- Developed and maintained a built-in feedback feature, enabling users to report issues and suggest improvements; supported continuous refinement based on real user input
+- Participating actively in **Scrum-based development**, sprint planning, and testing
+
+The project was developed for the **LIPPA project**, in cooperation with product owner Marko “Narsu” Rintamäki and other JAMK support staff.
+
 
 ---
 
@@ -57,30 +120,6 @@ I'm currently looking for opportunities where I can turn data into decisions, an
 
 ---
 
-## 📂 Projects
-
-### 🚗 [Car Price Predictor](https://github.com/yourusername/car-price-predictor)  
-As part of a data analytics and machine learning project at JAMK University of Applied Sciences, our four‑person team developed a machine learning model that analyzes data from over **3 million used cars**.  
-The resulting application provides accurate price estimates for future vehicles to support **car dealership needs**, enabling:
-- Data-driven pricing decisions  
-- Improved customer experience  
-- Optimized inventory management
-
-### 🧪 [Rapid Test Strip Analyzer](https://github.com/yourusername/rapid-test-strip-analyzer)  
-This self-directed project resulted in a **Python-based prototype** that analyzes the visibility of control and test lines in a photo of a rapid test strip.  
-Using **OpenCV** and **NumPy**, the system:
-- Automatically detects lines  
-- Measures intensity  
-- Compares values to a configurable threshold  
-
-The tool simplifies visual interpretation, supports documentation, and lays the groundwork for a future mobile healthcare app.
-
-### 🤖 [AIDA Project](https://github.com/yourusername/aida-project) *(Coming soon)*  
-A larger data-focused development project currently in progress. More details will be added once the initial version is ready for release.
-
-
----
-
 ## 🌱 I'm Currently Learning
 
 - 🧪 Improving my machine learning basics  
@@ -106,21 +145,12 @@ A larger data-focused development project currently in progress. More details wi
 
 - How to make better coffee ☕
 
----
 
-## 💬 Languages
-
-- 🇫🇮 Finnish – Native  
-- 🇪🇸 Spanish – Fluent  
-- 🇬🇧 English – Fluent  
-- 🇸🇪 Swedish – Basic understanding
-
----
 
 ## 📫 Let's Connect
 
 - 📧 Email: *anthony.backstrom.work@gmail.com*  
-- 🔗 LinkedIn: [linkedin.com/in/yourname](www.linkedin.com/in/anthony-bäckström-b66a442b0)  
+- 🔗 LinkedIn: [Anthony Bäckström](www.linkedin.com/in/anthony-bäckström-b66a442b0)  
 
 
 ---
