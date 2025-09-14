@@ -1,0 +1,158 @@
+body {
+    background-color: #191919;
+    background-image: url(./img/vecteezy_close-up-view-of-a-car-tire_27275841.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+    padding: 2em 0;
+}
+
+h1 {
+    text-align: center;
+    color: #f3f3f3;
+}
+
+h2 {
+    text-align: center;
+    color: #f3f3f3;
+}
+
+form {
+    color: #f3f3f3;
+    max-width: 30%;
+    padding: 50px 10% 10px 10%;
+    background-color: #212121;
+    border-radius: 1px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: inline-block;
+    clear: left;
+    text-align: left;
+    margin: 15px 0px;
+}
+
+select {
+    border: none;
+}
+
+select, input[type="radio"] {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background:#d0d6d6;
+}
+
+select, input[type="number"] {
+    margin-bottom: 10px;
+    width: 15em;
+    padding: 5px;
+    background:#d0d6d6;
+}
+
+option {
+    background:#d0d6d6;
+}
+
+input {
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4c7273;
+    color: #f3f3f3;
+    padding: 16px 32px;
+    border: none;
+    text-decoration: none;
+    margin: 3em 2px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #61857f;
+}
+
+img {
+    width: 100%;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.width200 {
+    width: 200px;
+}
+
+/* Extra small devices (phones) */
+@media only screen and (max-width: 670px) {
+    form {
+        background-color: #191919;
+    }
+    .center {
+        margin: 0;
+    }
+}
+
+.radio {
+    margin: 5px 0;
+}
+
+.results-container {
+    background-color: #212121;
+    max-width: 50%;
+    padding: 2em 0;
+}
+
+.prediction-result {
+    color: #f3f3f3;  /* Example color */
+    text-align: center;
+    /* other styling properties as needed */
+}
+
+.input-values {
+    background-color: #212121; /* Dark background for contrast */
+    color: #f3f3f3; /* Light text for readability */
+    border-radius: 5px;
+    margin: auto;
+    padding: 50px 20%;
+}
+
+.input-values h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.input-values ul {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0;
+    margin: 0 0 2em 0;
+}
+
+.input-values li {
+    margin-bottom: 5px;
+    line-height: 1.5; /* Increases line spacing for readability */
+}
+
+.input-values li b {
+    color: #4CAF50; /* A distinct color for keys */
+}
+
+.return-home {
+    background-color: #4c7273;
+    color: #f3f3f3;
+    padding: 16px 32px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.return-home:hover {
+    background-color: #61857f;
+}

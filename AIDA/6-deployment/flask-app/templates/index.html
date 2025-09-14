@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../static/img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Car Price Predictor</title>
+</head>
+<body>
+
+    <form action="/predict" method="post" class="center">
+        <img src="../static/img/logo.png">
+        <div class="middle">
+            <!-- Dropdown Menus -->
+            <label for="make_name" class="width200">Make</label>
+            <select name="make_name" id="make_name">
+                <option value="AM General">AM General</option>
+                <option value="Acura">Acura</option>
+                <option value="Alfa Romeo">Alfa Romeo</option>
+                <option value="Aston Martin">Aston Martin</option>
+                <option value="Audi">Audi</option>
+                <option value="BMW">BMW</option>
+                <option value="Bentley">Bentley</option>
+                <option value="Buick">Buick</option>
+                <option value="Cadillac">Cadillac</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Chrysler">Chrysler</option>
+                <option value="Datsun">Datsun</option>
+                <option value="Dodge">Dodge</option>
+                <option value="Eagle">Eagle</option>
+                <option value="FIAT">FIAT</option>
+                <option value="Ferrari">Ferrari</option>
+                <option value="Fishker">Fishker</option>
+                <option value="Ford">Ford</option>
+                <option value="GMC">GMC</option>
+                <option value="Genesis">Genesis</option>
+                <option value="Geo">Geo</option>
+                <option value="Honda">Honda</option>
+                <option value="Hummer">Hummer</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="INFINITi">INFINITi</option>
+                <option value="Isuzu">Isuzu</option>
+                <option value="Jaguar">Jaguar</option>
+                <option value="Jeep">Jeep</option>
+                <option value="Karma">Karma</option>
+                <option value="Kia">Kia</option>
+                <option value="Lamborghini">Lamborghini</option>
+                <option value="Land Rover">Land Rover</option>
+                <option value="Lexus">Lexus</option>
+                <option value="Lincoln">Lincoln</option>
+                <option value="Lotus">Lotus</option>
+                <option value="MINI">MINI</option>
+                <option value="Maserati">Maserati</option>
+                <option value="Maybach">Maybach</option>
+                <option value="Mazda">Mazda</option>
+                <option value="McLaren">McLaren</option>
+                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                <option value="Mercury">Mercury</option>
+                <option value="Mitsubishi">Mitsubishi</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Oldsmobile">Oldsmobile</option>
+                <option value="Pininfarina">Pininfarina</option>
+                <option value="Plymouth">Plymouth</option>
+                <option value="Pontiac">Pontiac</option>
+                <option value="Porsche">Porsche</option>
+                <option value="RAM">RAM</option>
+                <option value="Rolls-Royce">Rolls-Royce</option>
+                <option value="SRT">SRT</option>
+                <option value="Saab">Saab</option>
+                <option value="Saturn">Saturn</option>
+                <option value="Scion">Scion</option>
+                <option value="Subaru">Subaru</option>
+                <option value="Suzuki">Suzuki</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Volvo">Volvo</option>
+                <option value="smart">smart</option>
+            </select>
+            <br>
+            <label for="body_type" class="width200">Body type</label>
+            <select name="body_type" id="body_type">
+                <option value="Convertible">Convertible</option>
+                <option value="Coupe">Coupe</option>
+                <option value="Hatchback">Hatchback</option>
+                <option value="Minivan">Minivan</option>
+                <option value="Pickup Truck">Pickup Truck</option>
+                <option value="SUV / Crossover">SUV / Crossover</option>
+                <option value="Sedan">Sedan</option>
+                <option value="Van">Van</option>
+                <option value="Wagon">Wagon</option>
+            </select>
+            <br>
+            <label for="fuel_type" class="width200">Fuel type</label>
+            <select name="fuel_type" id="fuel_type">
+                <option value="Biodiesel">Biodiesel</option>
+                <option value="Compressed Natural Gas">Compressed Natural Gas</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Flex Fuel Vehicle">Flex Fuel Vehicle</option>
+                <option value="Gasoline">Gasoline</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Propane">Propane</option>
+            </select>
+            <br>
+            <label for="transmission" class="width200">Transmission</label>
+            <select name="transmission" id="transmission">
+                <option value="A">A</option>
+                <option value="CVT">CVT</option>
+                <option value="Dual Clutch">Dual Clutch</option>
+                <option value="M">M</option>
+            </select>
+            <br>
+
+            <!--Number Inputs-->
+            <label for="mileage" class="width200">Mileage</label>
+            <input type="number" id="mileage" name="mileage" step="1" pattern="\d+" required placeholder="10000">
+            <br>
+            <label for="year" class="width200">Year</label>
+            <input type="number" id="year" name="year" step="1" pattern="\d+" required>
+            <br>
+            <label for="horsepower" class="width200">Horsepower (hp)</label>
+            <input type="number" id="horsepower" name="horsepower" step="1" pattern="\d+" required>
+            <br>
+            <label for="torque" class="width200">Torque (Nm)</label>
+            <input type="number" id="torque" name="torque" step="1" pattern="\d+" required>
+            <br>
+            <label for="major_options_count" class="width200">Number of car accessories</label>
+            <input type="number" id="major_options_count" name="major_options_count" step="1" pattern="\d+" required>
+            <br>
+            <label for="fuel_tank_volume" class="width200">Fuel tank volume (gallon)</label>
+            <input type="number" id="fuel_tank_volume" name="fuel_tank_volume" step="1" pattern="\d+" required>
+            <br>
+            <label for="highway_fuel_economy" class="width200">Highway fuel economy (MPG)</label>
+            <input type="number" id="highway_fuel_economy" name="highway_fuel_economy" step="0.01" pattern="\d+" required>
+            <br>
+            <label for="city_fuel_economy" class="width200">City fuel economy (MPG)</label>
+            <input type="number" id="city_fuel_economy" name="city_fuel_economy" step="0.01" pattern="\d+" required>
+
+            <br>
+
+            <!--Radio Buttons-->
+
+            <!--
+            <label for="isCabYes" class="radio">Ollut taksina? <br>
+                <input id="isCabYes" type="radio" name="isCab-outdoor">Kyllä
+            </label>
+            <label for="isCabNo" class="radio">
+                <input id="isCabNo" type="radio" name="indoor-isCabNo">Ei
+            </label>
+
+            <label for="isNewYes" class="radio">On uusi? <br>
+                <input id="isNewYes" type="radio" name="isNew-outdoor">Kyllä
+            </label>
+            <label for="isNewNo" class="radio">
+                <input id="isNewNo" type="radio" name="indoor-isNewNo">Ei
+            </label>
+             -->
+            
+            <p>Seller rating</p>
+                <input type="radio" id="seller_rating1" name="seller_rating" value="1">
+                <label for="seller_rating1">1</label>
+                <input type="radio" id="seller_rating2" name="seller_rating" value="2">
+                <label for="seller_rating2">2</label>  
+                <input type="radio" id="seller_rating3" name="seller_rating" value="3">
+                <label for="seller_rating3">3</label>
+                <input type="radio" id="seller_rating4" name="seller_rating" value="4">
+                <label for="seller_rating4">4</label>
+                <input type="radio" id="seller_rating5" name="seller_rating" value="5">
+                <label for="seller_rating5">5</label>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+
+</body>
+</html>

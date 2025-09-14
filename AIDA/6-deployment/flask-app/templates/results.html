@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../static/img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Car Price Predictor - Result</title>
+<body>
+    <div class="results-container center">
+        <!-- Display the prediction result -->
+        {% if prediction_text %}
+            <div class="prediction-result">
+                <h2>{{ prediction_text }}</h2>
+            </div>
+
+            <div class="prediction-result">
+                <h2>Belongs to</h2>
+                <h3>{{ price_range_class }}</h3>
+            </div>
+
+        {% else %}
+            <div class="no-result">
+                <h2>No prediction available.</h2>
+            </div>
+        {% endif %}
+
+        <div class="input-values">
+            <h3>Input Values:</h3>
+            <ul>
+                {% for key, value in form_values.items() %}
+                    <li><b>{{ key }}:</b> {{ value }}</li>
+                {% endfor %}
+            </ul>
+            <br>
+            <a href="/" class="return-home">Return to Home</a>
+        </div>
+
+    </div>
+
+
+    <!-- Your CSS and JavaScript files (if any) -->
+</body>
+</html>

@@ -1,0 +1,334 @@
+/* @collapse */
+/* Css for skill-selection page */
+
+/* colors */
+/* rgb(13, 0, 76);
+rgba(226, 6, 111, 90%) */
+
+/* Background color  */
+.bg-skill {
+  background-color: white;
+}
+
+.container-skill {
+  width: 100%;
+  max-width: 9999px;
+}
+
+/* Header */
+
+.skill-header {
+  height: 10%;
+  margin: auto;
+  background-color: rgb(13, 0, 76);
+}
+.skill-header h1 {
+  color: #fff !important;
+}
+
+.title {
+  font-size: 2.5rem !important;
+}
+
+.skill-header-logo {
+  width: 40%;
+}
+
+/* Progress bar */
+
+#progressCount {
+  pointer-events: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.progress-container {
+  height: 13%;
+}
+
+.progressBar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+}
+
+.progressBar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: lightgray;
+  z-index: 1;
+}
+
+.progress {
+  background-color: rgb(13, 0, 76);
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 35px;
+  height: 35px;
+  background-color: lightgray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+  color: black;
+  z-index: 2;
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  font-size: 0.85rem;
+  color: rgb(13, 0, 76);
+}
+.progress-step-active {
+  /* background-color: rgba(226, 6, 111, 90%); */
+  background-color: rgb(13, 0, 76);
+  z-index: 3;
+  transition: 0.3s;
+}
+
+.progress-step-active::before {
+  color: white !important;
+}
+/* Skill-selection-view Card/Grid */
+
+.grid-header {
+  max-height: 5%;
+  background-color: rgb(13, 0, 76);
+}
+
+.box {
+  background: rgb(13, 0, 76);
+  border-radius: 0 !important;
+  overflow: hidden;
+  max-height: 30vh;
+  min-height: 15vh;
+  -webkit-box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  color: white !important;
+  width: 18rem;
+}
+
+.card-body {
+  pointer-events: none;
+}
+
+.card-footer-btn {
+  pointer-events: initial;
+}
+
+.box p {
+  pointer-events: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.card-title {
+  text-align: center;
+  border-bottom: 2px solid rgba(226, 6, 111, 90%);
+  pointer-events: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.box-active {
+  background-color: rgba(226, 6, 111) !important;
+}
+
+.box-active .card-title {
+  border-bottom: 2px solid rgb(13, 0, 76);
+}
+
+.grid-container {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-width: 90%;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-height: 0;
+  /* transition: 0.2s ease-in max-height; */
+}
+
+.grid > div {
+  flex-basis: calc(35% - 40px);
+}
+
+.show {
+  max-height: 9999px !important;
+}
+
+/* Grid Custom ScrollBar */
+
+.grid-container::-webkit-scrollbar {
+  width: 1em;
+}
+.grid-container::-webkit-scrollbar-track {
+  background: rgb(13, 0, 76);
+  /* border-radius: 100vw; 
+  margin-block: 0.5em; */
+}
+.grid-container::-webkit-scrollbar-thumb {
+  background: rgba(226, 6, 111, 90%);
+  /* border-radius: 100vw; */
+  border: 0.25em solid rgb(13, 0, 76);
+}
+
+/* Buttons */
+
+.box-active button,
+.box-active .card-footer {
+  background-color: rgba(226, 6, 111) !important;
+  border: none;
+}
+
+.container-skill button {
+  background-color: rgb(13, 0, 76);
+}
+
+.btn {
+  transition: -2s !important;
+  border: none;
+  border-radius: 0 !important;
+}
+
+.btn:active {
+  background-color: rgb(13, 0, 76) !important;
+}
+
+.box-active button:active {
+  background-color: rgba(226, 6, 111) !important;
+}
+
+.btn:hover {
+  text-decoration: underline;
+  background-color: rgb(13, 0, 76);
+}
+
+.grid-header button:hover,
+.grid-header-summary button:hover {
+  background-color: rgba(226, 6, 111) !important;
+}
+
+.category-button:hover {
+  background-color: rgb(13, 0, 76);
+}
+
+.button-active {
+  background-color: rgba(226, 6, 111, 90%) !important;
+  text-decoration: underline;
+}
+
+.TEST {
+  background-color: #ffff !important;
+  pointer-events: none;
+}
+
+.TEST * {
+  background-color: #ffff !important;
+  border: 0;
+  pointer-events: none !important;
+}
+
+/* SkillInfoView */
+
+#popup-container {
+  position: fixed;
+  top: 13%;
+  left: 15%;
+  width: 70%;
+  height: 80%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  background-color: rgb(13, 0, 76);
+}
+
+#popup-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  padding-top: 0;
+}
+
+#popup-skillInfo {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 95%;
+}
+
+#popup-header {
+  height: auto;
+  height: 5%;
+}
+
+#close-btn {
+  display: block;
+  border: 0;
+  position: absolute;
+  top: 0.5%;
+  right: 1%;
+}
+
+#close-btn:hover {
+  text-decoration: underline;
+}
+
+/* Summary */
+
+#summary-content {
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#summary-content::-webkit-scrollbar {
+  width: 1em;
+}
+#summary-content::-webkit-scrollbar-track {
+  background: rgb(13, 0, 76);
+  /* border-radius: 100vw; 
+  margin-block: 0.5em; */
+}
+#summary-content::-webkit-scrollbar-thumb {
+  background: rgba(226, 6, 111, 90%);
+  /* border-radius: 100vw; */
+  border: 0.25em solid rgb(13, 0, 76);
+}
+
+.grid-header-summary {
+  max-height: 6%;
+  background-color: rgb(13, 0, 76);
+}

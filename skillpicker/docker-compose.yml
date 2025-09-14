@@ -1,0 +1,95 @@
+# Version
+version: "3.6"
+# Networks
+
+networks:
+  frontend-backend:
+    driver: bridge
+  backend-db:
+    driver: bridge
+  caddy-frontend:
+    driver: bridge
+
+services:
+
+# Database
+  postgres:
+    image: postgres:15.2
+    container_name: postgre-server
+    restart: unless-stopped
+    networks:
+      - backend-db
+    volumes:
+      - ./data_post:/var/lib/postgresql/data
+#   ports:
+#      - "5432:5432"
+    env_file:
+      - post.env
+
+# Backend
+  backend:
+    image: gitlab.labranet.jamk.fi:4567/it-ff-2023-t05/x-backend/backend:latest
+#    build: build testfolder/
+    container_name: backendi
+    restart: unless-stopped
+    env_file:
+      - nod.env
+    networks:
+      - frontend-backend
+      - backend-db
+#    ports:
+#      - 3001:3001
+    links:
+      - postgres
+    depends_on:
+      - postgres
+      
+# Frontend 
+  frontend:
+    image: gitlab.labranet.jamk.fi:4567/it-ff-2023-t05/x-backend/frontend:latest
+ #   build: testfolder/
+    container_name: Skillpicker
+    restart: unless-stopped
+    networks:
+      - frontend-backend
+      - caddy-frontend
+    links:
+      - backend
+    depends_on:
+      - backend
+   # ports:
+   #  - 3000:3000
+  #  env_file:
+  #    - front.env
+
+# Caddy image to serve the webpage version 2.6.4
+  proxy:
+    image: caddy:2.6.4
+    container_name: caddy-server
+    restart: unless-stopped
+    networks:
+      - caddy-frontend
+      - frontend-backend
+    ports:
+      - "80:80"
+      - "443:443"
+#     - "443:443/udp"
+    volumes:
+      - $PWD/Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy_data:/data
+      - ./caddy_config:/config
+      - ./caddy_logs:/var/log/
+    links:
+      - frontend
+    depends_on:
+      - frontend
+  
+volumes:
+ caddy_data:
+  external: true
+ caddy_config:
+ data_post:
+  
+
+  
+

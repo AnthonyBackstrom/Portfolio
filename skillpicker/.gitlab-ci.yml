@@ -1,0 +1,108 @@
+# For more information, see: https://docs.gitlab.com/ee/ci/yaml/index.html#stages
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
+
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'main'
+    #
+stages:
+  - build
+  - deploy
+
+variables:
+#  TAG_LATEST: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_NAME:latest
+    TAG_COMMIT: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_NAME:$CI_COMMIT_SHORT_SHA
+
+build_front:
+  stage: build
+  image: docker:23.0
+  variables:
+    DOCKER_TLS_CERTDIR: ""
+    DOCKER_HOST: "tcp://docker:2375"
+  services:
+    - name: docker:23.0-dind
+      command: ["--tls=false"]
+  script:
+    - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER gitlab.labranet.jamk.fi:4567 --password-stdin
+    - chmod og= $ID_RSA 
+    - echo "Building front..."
+    - cp $JTWFI .env
+    - docker build --build-arg REACT_APP_JWT_SECRET=$JWT -t frontend front/  #-f front/Dockerfile # --rm=true 
+    - docker tag frontend $CI_REGISTRY_IMAGE/frontend:latest
+    - docker push $CI_REGISTRY_IMAGE/frontend:latest
+    - docker tag frontend $CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHORT_SHA
+    - docker push $CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHORT_SHA
+    - rm .env
+    - echo "Front push done"
+    
+ #   - docker build -t $TAG_COMMIT -t $TAG_LATEST .
+##  - docker build -t $CI_REGISTRY_IMAGE:latest .
+##  - docker push $TAG_COMMIT
+ #   - docker push $TAG_LATEST
+#   - docker push $CI_REGISTRY_IMAGE:latest
+ #   - echo $CI_REGISTRY_IMAGE
+ #   - echo $TAG_LATEST
+
+build_backend:
+   stage: build
+   image: docker:23.0
+   variables:
+    DOCKER_TLS_CERTDIR: ""
+    DOCKER_HOST: "tcp://docker:2375"
+   services:
+    - name: docker:23.0-dind
+      command: ["--tls=false"]
+   script:
+#      - docker build -f front/Dockerfile -t testinen
+       - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER gitlab.labranet.jamk.fi:4567 --password-stdin
+       - echo "Building backend..."
+       - docker build -t backend back/src
+       - docker tag backend $CI_REGISTRY_IMAGE/backend:latest
+       - docker push $CI_REGISTRY_IMAGE/backend:latest
+       - docker tag backend $CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHORT_SHA
+       - docker push $CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHORT_SHA
+       - echo "Backend push done"
+     # - docker build -f back/src/Dockerfile #--rm=true backend
+   #   - docker build -t backend
+   #   - docker tag backend $CI_REGISTRY_IMAGE/backend:latest
+   #   - docker push $CI_REGISTRY_IMAGE/backend:lastest
+
+deploy:
+  stage: deploy
+  image: docker:stable
+  variables: 
+    DOCKER_TLS_CERTDIR: ""
+    DOCKER_HOST: "tcp://docker:2375"  
+  dependencies:
+    - build_front
+    - build_backend
+  script:
+    - chmod og= $ID_RSA
+    - scp -i $ID_RSA -o StrictHostKeyChecking=no Caddyfile $SERVER_USER@$SERVER_IP:/home/deploy/testikansio/
+    - scp -i $ID_RSA -o StrictHostKeyChecking=no docker-compose.yml $SERVER_USER@$SERVER_IP:/home/deploy/testikansio/
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY"
+    - echo "POSTGRES_DB=${DB_DATABASE}" >> post.env
+    - echo "POSTGRES_PASSWORD=${DB_PASSWD}" >> post.env
+    - echo "POSTGRES_USER=${DB_USER}" >> post.env
+    - echo "DATABASE_URL=postgres://${DB_USER}:${DB_PASSWD}@postgres:5432/${DB_DATABASE}" >> nod.env
+    - echo "JWT_SECRET=${JWT}" >> nod.env
+#    - echo "REACT_APP_JWT_SECRET=${JWT}" >> front.env
+#    - scp -i $ID_RSA -o StrictHostKeyChecking=no front.env $SERVER_USER@$SERVER_IP:/home/deploy/testikansio
+#    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "mkdir -p /testikansio
+#    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "mkdir -p /testikansio/"
+    - scp -i $ID_RSA -o StrictHostKeyChecking=no post.env $SERVER_USER@$SERVER_IP:/home/deploy/testikansio
+    - scp -i $ID_RSA -o StrictHostKeyChecking=no nod.env $SERVER_USER@$SERVER_IP:/home/deploy/testikansio
+ #   - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker image rm -f gitlab.labranet.jamk.fi:4567/it-ff-2023-t05/x-backend/main:latest"
+ #   - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker run -d -p 3000:3000 gitlab.labranet.jamk.fi:4567/it-ff-2023-t05/x-backend/main:latest"
+##  -  scp -r -i $ID_RSA -o StrictHostKeyChecking=no testfolder $SERVER_USER@$SERVER_IP:/home/deploy/testikansio/
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd testikansio/ && docker compose down --remove-orphans && docker image rm -f gitlab.labranet.jamk.fi:4567/it-ff-2023-t05/x-backend/backend:latest && docker image rm -f gitlab.labranet.jamk.fi:4567/it-ff-2023-t05/x-backend/frontend:latest && docker compose build --pull && docker compose up -d"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "rm testikansio/post.env && rm testikansio/nod.env"
+##    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd testikansio/ && docker compose down --remove-orphans && docker rm -f gitlab.labranet.jamk.fi:4567/it-ff-2023-t05/x-backend/main:latest && docker image rm -f gitlab.labranet.jamk.fi:4567/it-ff-2023-t05/x-backend/main:latest && docker compose build && docker compose up -d"
+   # - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "pwd"
+   # - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker compose build"
+   # - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker compose up -d"
+   # - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker pull $TAG_COMMIT"
+   # - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker container rm -f my-app || true"
+   # - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker run -d -p 80:80 --name my-app $TAG_COMMIT"

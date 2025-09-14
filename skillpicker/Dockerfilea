@@ -1,0 +1,20 @@
+FROM node:19-alpine
+
+WORKDIR /usr/app
+
+# Copy packages to /usr/app/. the / at the end is important so it creates a folder
+
+COPY front/package*.json /usr/app/
+
+# Install dependencies from package.json
+
+RUN npm install 
+
+COPY front /usr/app
+
+#Expose port 3000 for the app
+
+RUN npm run build
+
+CMD [ "npx", "serve", "build" ]
+# CMD ["npm", "start"]

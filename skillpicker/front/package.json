@@ -1,0 +1,27 @@
+{
+  "name": "skillpicker",
+  "version": "0.0.6",
+  "description": "Skillpicker, a tool which we use to gather information of the needes skills",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "author": "Code Crusaders",
+  "license": "ISC",
+  "dependencies": {
+    "jose": "^4.13.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.9.0",
+    "react-select": "^5.7.2",
+    "react-to-print": "^2.14.12"
+  },
+  "devDependencies": {
+    "react-router-dom": "^6.8.1",
+    "react-scripts": "^5.0.1"
+  }
+}

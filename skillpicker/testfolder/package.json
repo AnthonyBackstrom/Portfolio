@@ -1,0 +1,18 @@
+{
+  "name": "skillpicker",
+  "version": "0.0.6",
+  "description": "Test file to test out https",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node test.js"
+  },
+  "author": "Code Crusaders",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jose": "^4.13.1",
+    "node-fetch": "^3.3.1"
+  }
+}

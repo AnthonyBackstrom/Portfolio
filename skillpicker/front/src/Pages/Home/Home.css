@@ -1,0 +1,101 @@
+/* Css for homepage */
+
+/* Homepage background */
+body {
+  background: linear-gradient(
+    130deg,
+    rgba(13, 0, 76, 1) 65%,
+    rgba(226, 6, 111, 1) 100%
+  );
+}
+
+/* Homepage responsive */
+
+@media (max-width: 991px) {
+  body {
+    background: linear-gradient(
+      130deg,
+      rgba(13, 0, 76, 1) 75%,
+      rgba(226, 6, 111, 1) 100%
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .logo {
+    width: 80% !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .logo_container {
+    width: 80% !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: auto !important;
+  }
+  .home-text-col {
+    height: 100% !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .triangle_icon {
+    width: 20% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    background: linear-gradient(
+      130deg,
+      rgba(13, 0, 76, 1) 80%,
+      rgba(226, 6, 111, 1) 100%
+    );
+  }
+}
+
+@media (min-width: 1500px) {
+  body {
+    background: linear-gradient(
+      130deg,
+      rgba(13, 0, 76, 1) 85%,
+      rgba(226, 6, 111, 1) 100%
+    );
+  }
+  .container-main {
+    margin-left: 3em !important;
+    margin-right: auto !important;
+    width: 95% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Homepage form */
+
+input {
+  color: black;
+}
+
+.submit-btn {
+  font-family: "sofia-pro", sans-serif !important;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+/* Homepage icon */
+
+.triangle_icon {
+  width: 12%;
+}
+
+.icon {
+  height: 15% !important;
+}

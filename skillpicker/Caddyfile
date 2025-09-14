@@ -1,0 +1,59 @@
+skillpicker.ictowls.xyz {
+  @notStatic {
+    not path /static/*
+    not path /manifest.json
+    not path /index.html
+    not path /service-worker.js
+    not path /api/*
+  }
+
+  rewrite @notStatic /
+
+  header {
+    Content-Security-Policy "default-src * data: 'unsafe-inline' 'unsafe-eval'; script-src 'unsafe-inline' 'unsafe-eval' *; style-src 'unsafe-inline' *;"
+    Referrer-Policy "strict-origin-when-cross-origin"
+    Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    X-Content-Type-Options "nosniff"
+    X-Frame-Options "DENY"
+    Permissions-Policy interest-cohort=()
+  }
+
+  file_server @notStatic {
+    browse off
+  }
+    handle /api/* {
+            reverse_proxy http://backend:3001 {
+                header_up Host {host}
+                header_up X-Forwarded-Host {host}
+                header_up X-Real-IP {remote}
+                header_up X-Forwarded-For {remote}
+                header_up X-Forwarded-Port {server_port}
+                header_up X-Forwarded-Proto {scheme}
+            }
+    }
+    
+  handle /sockjs-node {
+    reverse_proxy http://frontend:3000 {
+      header_up Host {host}
+      header_up Upgrade {>Upgrade}
+      header_up Connection {>Connection}
+    }
+  }
+
+  handle {
+    reverse_proxy http://frontend:3000 {
+      header_up Host {host}
+    }
+  }
+  log {
+        output file /var/log/access.log {
+            roll_size 100MiB
+            roll_keep 10
+            roll_keep_for 720h
+        }
+    }
+}
+
+
+
+
