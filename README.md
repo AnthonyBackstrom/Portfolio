@@ -1,27 +1,27 @@
 # 👋 Hi there, I'm Anthony Backström
 
-I'm a final-year ICT engineering student at **Jyväskylä University of Applied Sciences**, specializing in **data analytics** and **artificial intelligence**. My studies are nearly complete — just the **thesis** and **final internship** remain.
+I'm a final-year ICT engineering student at **Jyväskylä University of Applied Sciences**, specializing in **data analytics** and **artificial intelligence**. My studies are nearly complete, just the **thesis** and **final internship** remain.
 
-Before stepping into tech, I spent 8 years working in **precision manufacturing** as a CNC machinist, operating Fanuc, AutoCAD and Siemens systems. That hands-on experience gave me a deep appreciation for efficiency, accuracy, and solving practical problems — things I now approach from a data and automation perspective.
+Before stepping into tech, I spent 8 years working in **precision manufacturing** as a CNC machinist, operating Fanuc, AutoCAD and Siemens systems. That hands-on experience gave me a deep appreciation for efficiency, accuracy, and solving practical problems.
 
-I'm currently looking for opportunities where I can turn data into decisions, and code into real-world impact.
+I'm currently seeking a trainee opportunity where I can apply my skills in real projects and continue contributing beyond the internship.
 
 
 
-## ⚡ Quick Facts
 
-- 🧠 I'm part data wrangler, part automation nerd, part board game strategist
+##  Quick Facts
+
 - 📊 I use **Excel** for everything: tracking maintenance, planning meals, budgeting, scheduling... seriously, everything
-- 🤖 I build things with **Raspberry Pi** — automation, sensors, logging, and random Raspberry Pi contraptions "just because"
+- 🤖 I build things with **Raspberry Pi** automation, sensors, logging, and random Raspberry Pi contraptions "just because"
 - 🎲 I love **board games** and **miniature painting** — creativity and strategy keep me sharp
 - 🧩 I believe every problem is either a logic puzzle or a spreadsheet waiting to happen
 
 
-# 📂 Projects
+#  Projects
 
-## 🧪 [FAST-TEST – Smartphone LFA Strip Reader (ONGOING)]() *(Prototype)*
+##  [FAST-TEST – Smartphone LFA Strip Reader (ONGOING)]() *(Prototype)*
 
-**FAST-TEST** is a Python-based desktop prototype that transforms a smartphone into a compact reader for hormone-sensitive **lateral flow test strips (LFA)** — starting with salivary cortisol and testosterone. The application detects 0–4 visible lines in the test area from a photo and maps them to estimated hormone levels. Results are visualized on a time-series curve and saved for trend tracking.
+**FAST-TEST** is a Python-based desktop prototype that transforms a smartphone into a compact reader for hormone-sensitive **lateral flow test strips (LFA)** starting with salivary cortisol and testosterone. The application detects 0-4 visible lines in the test area from a photo and maps them to estimated hormone levels. Results are visualized on a time-series curve and saved for trend tracking.
 
 This project is developed **in collaboration with a friend** during our free time, with expert data support and validation from **two medical companies** involved in hormone diagnostics. They are responsible for providing test materials and reference data.
 
@@ -41,7 +41,7 @@ This solution is designed as a **research-grade prototype** and is **not for med
 
 
 
-## 🚗 [AIDA - Car Price Predictor 2024](./AIDA/6-deployment/report/end_report.ipynb)  
+##  [AIDA - Car Price Predictor 2024](./AIDA/6-deployment/report/end_report.ipynb)  
 As part of a data analytics and machine learning project at JAMK University of Applied Sciences, our four‑person team developed a machine learning model that analyzes data from over **3 million used cars**.  
 The resulting application provides accurate price estimates for future vehicles to support **car dealership needs**, enabling:
 - Data-driven pricing decisions  
@@ -58,10 +58,10 @@ The resulting application provides accurate price estimates for future vehicles 
 
 
 
-## 📥 [Skillpicker – Future Skills Mapping Tool 2023](./skillpicker/README.md)
+##  [Skillpicker – Future Skills Mapping Tool 2023](./skillpicker/README.md)
 
 As part of the **Future Factory course** at JAMK University of Applied Sciences, our team *Code Crusaders* was assigned to design and develop an application called **Skillpicker**.  
-The goal of the project is to bridge the gap between education and industry by collecting information on future skill needs from businesses and providing it to educational institutions. This helps schools update curricula to match real-world demands — improving employability and reducing the skill mismatch.
+The goal of the project is to bridge the gap between education and industry by collecting information on future skill needs from businesses and providing it to educational institutions. This helps schools update curricula to match real-world demands improving employability and reducing the skill mismatch.
 
 Our solution features:
 - A responsive web application where businesses can submit skill data (based on the SFIA framework)  
@@ -81,9 +81,11 @@ The project was developed for the **LIPPA project**, in cooperation with product
 
 ---
 
-## 🛠️ Skills & Technologies
+##  Skills & Technologies
+I have practical experience with the following technologies through studies, projects, and self-directed development work.
 
-### 🚀 Core Tools & Languages
+
+###  Core Tools & Languages
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white)
@@ -95,8 +97,16 @@ The project was developed for the **LIPPA project**, in cooperation with product
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=flat&logo=android&logoColor=white)
 ![AutoCAD](https://img.shields.io/badge/AutoCAD-E12027?style=flat&logo=autodesk&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat&logo=postman&logoColor=white)
+![Elixir](https://img.shields.io/badge/Elixir-4B275F?style=flat&logo=elixir&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white)
+![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 
-### 🧠 Machine Learning & Data Science
+
+###  Machine Learning & Data Science
 ![scikit-learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat&logo=scikitlearn&logoColor=white)
 ![Keras](https://img.shields.io/badge/Keras-D00000?style=flat&logo=keras&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
@@ -104,13 +114,14 @@ The project was developed for the **LIPPA project**, in cooperation with product
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
 
-### 🗃️ Databases
+###  Databases
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
 
-### ⚙️ Tools & Environments
+###  Tools & Environments
+![Visual Studio Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white)
 ![GitLab CI/CD](https://img.shields.io/badge/GitLab_CI%2FCD-FC6D26?style=flat&logo=gitlab&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnubash&logoColor=white)
@@ -120,7 +131,7 @@ The project was developed for the **LIPPA project**, in cooperation with product
 
 ---
 
-## 🌱 I'm Currently Learning
+##  I'm Currently Learning
 
 - 🧪 Improving my machine learning basics  
   (understanding model selection, overfitting, evaluation metrics like precision & recall)
